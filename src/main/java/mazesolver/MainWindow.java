@@ -3,7 +3,7 @@ package mazesolver;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.io.FileReader;
 import java.time.Duration;
@@ -56,12 +56,12 @@ public class MainWindow extends JFrame {
         var fileMenu = new JMenu("File");
 
         var openMenuItem = new JMenuItem("Open");
-        openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
+        openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         openMenuItem.addActionListener(action -> openMaze());
         fileMenu.add(openMenuItem);
 
         var quitMenuItem = new JMenuItem("Quit");
-        quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
+        quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         quitMenuItem.addActionListener(action -> dispose());
         fileMenu.add(quitMenuItem);
 

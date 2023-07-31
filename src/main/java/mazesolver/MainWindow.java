@@ -1,6 +1,7 @@
 package mazesolver;
 
 import java.awt.BorderLayout;
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
@@ -60,14 +61,20 @@ public class MainWindow extends JFrame {
         openMenuItem.addActionListener(action -> openMaze());
         fileMenu.add(openMenuItem);
 
-        var quitMenuItem = new JMenuItem("Quit");
-        quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        quitMenuItem.addActionListener(action -> dispose());
-        fileMenu.add(quitMenuItem);
+        if (!(Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.APP_QUIT_STRATEGY))) {
+            var quitMenuItem = new JMenuItem("Quit");
+            quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+            quitMenuItem.addActionListener(action -> dispose());
+            fileMenu.add(quitMenuItem);
+        }
 
         menuBar.add(fileMenu);
 
-        setJMenuBar(menuBar);
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.APP_MENU_BAR)) {
+            Desktop.getDesktop().setDefaultMenuBar(menuBar);
+        } else {
+            setJMenuBar(menuBar);
+        }
     }
 
     private void createButtons() {

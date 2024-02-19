@@ -8,7 +8,7 @@ A maze solver.
 ## Prerequisites
 
 * [Git](https://git-scm.com/)
-* JDK (>= 17)
+* JDK (>= 21)
 
 
 ## Running

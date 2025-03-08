@@ -14,17 +14,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MazeTest {
     @Test
-    public void shouldThrowNullPointerExceptionWhenParsingNullMaze() throws Exception {
-        assertThrows(NullPointerException.class, () -> {
-            Maze.parse(null);
-        });
+    public void shouldThrowNullPointerExceptionWhenParsingNullMaze() {
+        assertThrows(NullPointerException.class, () -> Maze.parse(null));
     }
 
     @Test
-    public void shouldNotParseMazeWithInvalidCharacters() throws Exception {
-        assertThrows(ParseException.class, () -> {
-            Maze.parse(new StringReader("#****#"));
-        });
+    public void shouldNotParseMazeWithInvalidCharacters() {
+        assertThrows(ParseException.class, () -> Maze.parse(new StringReader("#****#")));
     }
 
     @Test
@@ -71,10 +67,8 @@ public class MazeTest {
     }
 
     @Test
-    public void shouldThrowParseExceptionWhenThereAreMultipleStartingPoints() throws Exception {
-        assertThrows(ParseException.class, () -> {
-            Maze.parse(new StringReader("S..SE"));
-        });
+    public void shouldThrowParseExceptionWhenThereAreMultipleStartingPoints() {
+        assertThrows(ParseException.class, () -> Maze.parse(new StringReader("S..SE")));
     }
 
     @Test

@@ -178,7 +178,7 @@ public class MainWindow extends JFrame {
     private void tick() {
         increment();
 
-        if (mazePanel.getStep() == mazePanel.getMaze().getHistory().size() - 1){
+        if (mazePanel.getStep() == mazePanel.getMaze().getHistory().size() - 1) {
             animateButton.setEnabled(false);
             pauseButton.setEnabled(false);
 

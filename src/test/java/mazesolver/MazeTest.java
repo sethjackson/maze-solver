@@ -93,6 +93,13 @@ public class MazeTest {
     }
 
     @Test
+    public void shouldSolveMultidimensionalMaze() throws Exception {
+        var maze = Maze.parse(new StringReader("S..\n..E"));
+
+        assertTrue(maze.solve());
+    }
+
+    @Test
     public void shouldHaveHistoryForSolvableMaze() throws Exception {
         var maze = Maze.parse(new StringReader("S..E"));
 

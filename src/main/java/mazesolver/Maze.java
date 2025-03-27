@@ -120,6 +120,7 @@ public class Maze {
                 moves.push(tiles.get(y + 1).get(x));
             }
         }
+
         return false;
     }
 

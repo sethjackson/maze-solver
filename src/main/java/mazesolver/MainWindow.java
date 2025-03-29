@@ -53,7 +53,6 @@ public class MainWindow extends JFrame {
     private void createMenus() {
         var menuBar = new JMenuBar();
 
-        // file menu
         var fileMenu = new JMenu("File");
 
         var openMenuItem = new JMenuItem("Open");

@@ -34,7 +34,7 @@ public class MainWindow extends JFrame {
         setTitle("Maze Solver");
         setPreferredSize(new Dimension(640, 480));
         setMinimumSize(getPreferredSize());
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         timer = new Timer(150, action -> tick());
@@ -63,7 +63,7 @@ public class MainWindow extends JFrame {
         if (!(Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.APP_QUIT_STRATEGY))) {
             var quitMenuItem = new JMenuItem("Quit");
             quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-            quitMenuItem.addActionListener(action -> dispose());
+            quitMenuItem.addActionListener(action -> System.exit(0));
             fileMenu.add(quitMenuItem);
         }
 

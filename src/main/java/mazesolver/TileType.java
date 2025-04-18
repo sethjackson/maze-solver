@@ -6,7 +6,7 @@ public enum TileType {
     SPACE('.'),
     WALL('#');
 
-    private char value;
+    private final char value;
 
     TileType(char value) {
         this.value = value;

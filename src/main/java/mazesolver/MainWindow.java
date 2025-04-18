@@ -21,14 +21,14 @@ import javax.swing.KeyStroke;
 import javax.swing.Timer;
 
 public class MainWindow extends JFrame {
-    private Timer timer;
+    private final Timer timer;
 
     private JButton animateButton;
     private JButton stepButton;
     private JButton pauseButton;
 
-    private MazePanel mazePanel = new MazePanel();
-    private StatusPanel statusPanel = new StatusPanel(this);
+    private final MazePanel mazePanel = new MazePanel();
+    private final StatusPanel statusPanel = new StatusPanel(this);
 
     public MainWindow() {
         setTitle("Maze Solver");

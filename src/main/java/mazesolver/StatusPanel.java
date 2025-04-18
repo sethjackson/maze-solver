@@ -9,8 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class StatusPanel extends JPanel {
-    private JLabel status = new JLabel();
-    private JLabel step = new JLabel();
+    private final JLabel status = new JLabel();
+    private final JLabel step = new JLabel();
 
     public StatusPanel(Component parent) {
         setPreferredSize(new Dimension(parent.getWidth(), 26));

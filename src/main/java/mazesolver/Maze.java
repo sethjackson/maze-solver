@@ -9,10 +9,10 @@ import java.util.Objects;
 import java.util.Stack;
 
 public class Maze {
-    private List<List<Tile>> tiles;
-    private Tile start;
+    private final List<List<Tile>> tiles;
+    private final Tile start;
     private List<Tile> history;
-    private int width;
+    private final int width;
 
     private Maze(List<List<Tile>> tiles, Tile start, int width) {
         this.tiles = tiles;

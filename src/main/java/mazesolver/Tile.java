@@ -1,9 +1,9 @@
 package mazesolver;
 
 public class Tile {
-    private int x;
-    private int y;
-    private TileType tileType;
+    private final int x;
+    private final int y;
+    private final TileType tileType;
     private boolean visited;
 
     public Tile(int x, int y, TileType tileType) {

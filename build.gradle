@@ -10,7 +10,7 @@ java {
 }
 
 application {
-    mainClass = 'mazesolver.Program'
+    mainClass = 'mazesolver.Application'
 }
 
 repositories {

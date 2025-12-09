@@ -37,7 +37,7 @@ public class MainWindow extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        timer = new Timer(150, action -> tick());
+        timer = new Timer(150, _ -> tick());
 
         createMenus();
         createButtons();
@@ -57,13 +57,13 @@ public class MainWindow extends JFrame {
 
         var openMenuItem = new JMenuItem("Open");
         openMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        openMenuItem.addActionListener(action -> openMaze());
+        openMenuItem.addActionListener(_ -> openMaze());
         fileMenu.add(openMenuItem);
 
         if (!(Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.APP_QUIT_STRATEGY))) {
             var quitMenuItem = new JMenuItem("Quit");
             quitMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-            quitMenuItem.addActionListener(action -> System.exit(0));
+            quitMenuItem.addActionListener(_ -> System.exit(0));
             fileMenu.add(quitMenuItem);
         }
 
@@ -81,15 +81,15 @@ public class MainWindow extends JFrame {
         buttonPanel.setLayout(new GridLayout(1, 3));
 
         animateButton = new JButton("Animate");
-        animateButton.addActionListener(action -> animate());
+        animateButton.addActionListener(_ -> animate());
         animateButton.setEnabled(false);
 
         stepButton = new JButton("Step");
-        stepButton.addActionListener(action -> step());
+        stepButton.addActionListener(_ -> step());
         stepButton.setEnabled(false);
 
         pauseButton = new JButton("Pause");
-        pauseButton.addActionListener(action -> pause());
+        pauseButton.addActionListener(_ -> pause());
         pauseButton.setEnabled(false);
 
         buttonPanel.add(animateButton);

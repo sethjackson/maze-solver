@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MazeTest {
+public class MazeTests {
     @Test
     public void shouldThrowNullPointerExceptionWhenParsingNullMaze() {
         assertThrows(NullPointerException.class, () -> Maze.parse(null));

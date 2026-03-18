@@ -1,4 +1,10 @@
 {
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "latest",
+            "jdkDistro": "tem"
+        }
+    },
     "customizations": {
         "vscode": {
             "extensions": [

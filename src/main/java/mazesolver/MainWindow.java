@@ -149,6 +149,7 @@ public class MainWindow extends JFrame {
     }
 
     private void animate() {
+        animateButton.setEnabled(false);
         stepButton.setEnabled(false);
         pauseButton.setEnabled(true);
 

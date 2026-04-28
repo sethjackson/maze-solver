@@ -1,23 +1,17 @@
 # Maze Solver
 
-[![Build Status](https://github.com/sethjackson/maze-solver/workflows/ci/badge.svg)](https://github.com/sethjackson/maze-solver)
-
 A maze solver.
 
 
 ## Prerequisites
 
-* [Git](https://git-scm.com/)
-* JDK (>= 25)
+* A modern web browser
 
 
-## Running
+## Solving mazes
 
-    $ git clone https://github.com/sethjackson/maze-solver
-
-    $ cd maze-solver
-
-    $ ./gradlew run
+Download one of the prebuilt mazes from [here](mazes)
+then go [here](https://sethjackson.github.io/maze-solver/) and load a maze.
 
 
 ## License

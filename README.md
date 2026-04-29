@@ -1,4 +1,4 @@
-# Maze Solver
+# Maze solver
 
 A maze solver.
 
